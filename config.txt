@@ -1,0 +1,2 @@
+CLUSTER=EU
+ES_KEY=

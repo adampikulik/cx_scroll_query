@@ -1,0 +1,22 @@
+{
+    "size": 10000,
+    "query": {
+        "bool": {
+            "filter": [
+                {
+                    "query_string": {
+                        "query": "coralogix.metadata.subsystemName:\"test-api-production\" AND \"test_string\""
+                    }
+                },
+                {
+                    "range": {
+                        "coralogix.timestamp": {
+                            "gte": "2021-10-19T22:00:0.000Z",
+                            "lt": "2021-10-20T22:00:0.000Z"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
